@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<script>
+setTimeout(() => {
+  const video = document.createElement('video');
+  video.addEventListener('canplaythrough', event => {
+    window.alert('canplaythrough');
+  });
+
+  video.addEventListener('error', error => {
+    window.alert('Error ' + video.error.code + ':' + ' ' + video.error.message);
+  });
+  video.src = 'videos/video3.mp4';
+  //video.loop = true;
+  video.muted = true;
+  video.load();
+}, 1000);
+</script>
+</body>
+</html>
