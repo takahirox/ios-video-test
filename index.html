@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<script>
+setTimeout(() => {
+  const video = document.createElement('video');
+  video.addEventListener('canplaythrough', event => {
+    window.alert('canplaythrough');
+  });
+  video.src = 'videos/video.mp4';
+  video.loop = true;
+  video.muted = true;
+  video.load();
+}, 1000);
+</script>
+</body>
+</html>
