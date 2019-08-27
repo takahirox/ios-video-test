@@ -7,6 +7,10 @@ setTimeout(() => {
   video.addEventListener('canplaythrough', event => {
     window.alert('canplaythrough');
   });
+
+  video.addEventListener('error', error => {
+    window.alert(error.message);
+  });
   video.src = 'videos/video.mp4';
   //video.loop = true;
   video.muted = true;
